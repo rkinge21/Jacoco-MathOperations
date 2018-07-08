@@ -3,13 +3,13 @@ pipeline
 	agent any
 	stages
 	{
-		stage('Compile Stage')
+		stage('Clean Install Stage')
 		{
 			steps
 			{
 				withMaven(maven : 'maven3_5_3')
 				{
-			   	   bat 'mvn clean compile'
+			   	   bat 'mvn clean install'
 			   	}
 			}
 		}
