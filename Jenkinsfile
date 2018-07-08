@@ -3,13 +3,13 @@ pipeline
 	agent any
 	stages
 	{
-		stage('Clean Install Stage')
+		stage('Compile Stage')
 		{
 			steps
 			{
 				withMaven(maven : 'maven3_5_3')
 				{
-			   	   bat 'mvn clean install'
+			   	   bat 'mvn clean compile'
 			   	}
 			}
 		}
@@ -21,6 +21,13 @@ pipeline
 				{
 				   bat 'mvn test'
 				}
+			}
+		}
+		stage('Jacoco Collect')
+		{
+			steps
+			{
+				jacoco classPattern: 'C:\\jacoco\\classes', execPattern: 'C:\\jacoco\\**.exec', sourcePattern: ''
 			}
 		}
 	}
