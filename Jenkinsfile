@@ -27,7 +27,7 @@ pipeline
 		{
 			steps
 			{
-				jacoco classPattern: 'C:\jacoco\classes', execPattern: 'C:\jacoco\*.exec''
+				jacoco classPattern: 'C:/jacoco/classes', execPattern: 'C:/jacoco/*.exec''
 			}
 		}
 	}
