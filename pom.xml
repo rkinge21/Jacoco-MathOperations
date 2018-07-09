@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.test</groupId>
@@ -17,13 +16,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
-			<artifactId>junit</artifactId> 
+			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-				<resources>
+		<resources>
 			<resource>
 				<directory>${basedir}</directory>
 				<includes>
@@ -41,7 +40,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.7.0</version>
 				<configuration>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
@@ -50,19 +49,11 @@
 				</configuration>
 			</plugin>
 
-
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-compiler-plugin</artifactId> 
-				<version>3.6.1</version> <configuration> <skipMain>true</skipMain> <skip>true</skip> 
-				<source>1.8</source> <target>1.8</target> </configuration> </plugin> -->
-
-
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.version}</version>
 				<executions>
-					<!-- <execution> <id>prepare-agent</id> <goals> <goal>prepare-agent</goal> 
-						</goals> </execution> -->
 
 					<execution>
 						<id>default-prepare-agent</id>
